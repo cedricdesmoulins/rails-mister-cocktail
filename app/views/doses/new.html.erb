@@ -1,0 +1,12 @@
+<div class="container">
+<h2>Add wonderful ingredients without forget doses !</h2>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient %>
+  <%= f.input :description %>
+  <%= f.submit "add doses and ingredients", class: "btn btn-primary" %>
+<% end %>
+
+
+<%#= render 'form', cocktail: @cocktail, dose: @dose %>
+</div>

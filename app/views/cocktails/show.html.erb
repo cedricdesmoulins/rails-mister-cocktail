@@ -3,20 +3,26 @@
   <h2>This is our cocktail</h2>
 
   <h3> <%= @cocktail.name %> </h3>
-
-  <h4>Ajouter une dose</h4>
-
   <% @cocktail.doses.each do |dose| %>
-  <%= dose.description %>
+    <%= dose.description %>
+    <%= dose.ingredient.name %>
+    <%= link_to 'Destroy', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+
   <% end %>
 
-
-
- <!--  <h3> %= @cocktail.doses %> </h3>
-
-  <h4>Ingrédients</h4>
-  <h3> %= @cocktail.ingredients %> </h3> -->
-  <img src="https://picsum.photos/500/300/?random " alt="">
-
+  <h4>Ajouter une dose</h4>
+  <%= link_to "add ingredients and doses", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
 
 </div>
+<br>
+
+<div class="container">
+  <img src="https://picsum.photos/500/300/?random " alt="">
+</div>
+
+<div class="container">
+<%= link_to "accueil", cocktails_path, class: "btn btn-primary" %>
+</div>
+
+
+
