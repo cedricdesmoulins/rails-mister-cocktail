@@ -1,1 +1,22 @@
-show.html.erb
+<div class="container">
+
+  <h2>This is our cocktail</h2>
+
+  <h3> <%= @cocktail.name %> </h3>
+
+  <h4>Ajouter une dose</h4>
+
+  <% @cocktail.doses.each do |dose| %>
+  <%= dose.description %>
+  <% end %>
+
+
+
+ <!--  <h3> %= @cocktail.doses %> </h3>
+
+  <h4>Ingrédients</h4>
+  <h3> %= @cocktail.ingredients %> </h3> -->
+  <img src="https://picsum.photos/500/300/?random " alt="">
+
+
+</div>
