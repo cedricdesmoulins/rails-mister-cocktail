@@ -1,14 +1,9 @@
-
+<%= render "shared/banner" %>
 <div class="container">
-  <h1>Discover our cocktails ! </h1>
-
-
   <% @cocktails.each do |cocktail| %>
   <h2> <%= cocktail.name %> </h2>
   <%= link_to "more about this cocktail", cocktail_path(cocktail) %>
   <% end %>
-
-
   <h3>Add un cocktail</h3>
 
   <%= link_to "add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
